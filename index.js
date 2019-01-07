@@ -75,8 +75,8 @@ function generateMaterialIconPath(category, name) {
   if (name.includes('-') || name.includes(' ')) {
     throw new Error('If the name attribute of a mat-svg is multi-word, it must be separated by underscores.');
   }
-  var materialIconName = 'ic_' + name + '_24px.svg';
-  return path.resolve(path.join('node_modules', 'material-design-icons', category, 'svg', 'production', materialIconName));
+  var materialIconName = name + '.svg';
+  return path.resolve(path.join('node_modules', 'material-design-icons', 'icons', 'baseline', materialIconName));
 }
 
 function generateIonIconPath(name) {
